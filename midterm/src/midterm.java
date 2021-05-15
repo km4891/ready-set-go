@@ -57,9 +57,7 @@ public class midterm {
                int selection = 0;
                int cash = 200;
                Scanner input = new Scanner (System.in);
-               int x;
-               int y;
-               int z;
+               int x, y, z;
                int youWon = 0;
                int youLost = 0;
                int exactaWin = 100;
@@ -149,6 +147,7 @@ public class midterm {
                         youLost++;
                         System.out.println("lose");
                     }
+                    r.readysetgo();
                     break;
                     
                     case 5:
@@ -175,10 +174,7 @@ public class midterm {
                
                 
                 
-        // To run a race,
-        
-        // Shuffle integer array.
-        // Display elements in array using a loop (you can ignore this)
+         // Display elements in array using a loop (you can ignore this)
                 for (int value : r.getarray()) {
                     System.out.println(value);
                 }
