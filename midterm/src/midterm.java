@@ -89,7 +89,7 @@ public class midterm {
                 switch(selection){
                     // checks to see if your x & y picks are the same as r.first & r.second horses
                     case 1:
-                        System.out.println("Exacta Bet");
+                        System.out.print("For an Exacta bet, pick the horses that will finish in 1st & 2nd in correct order: ");
                         x = input.nextInt(); y = input.nextInt();
                             if (x == r.first() && y == r.second()) {
                                 cash = Math.abs (cash + exactaWin);
@@ -106,7 +106,7 @@ public class midterm {
                     
                     case 2:
                     // checks to see if your x & y picks are the same as r.first & r.second horses in any order
-                    System.out.println("Exacta Box Bet");
+                    System.out.print("For an Exacta Box bet, pick the horses that will finish in 1st & 2nd in any order: ");
                         x = input.nextInt(); y = input.nextInt();
                         if ( (x == r.first() && y == r.second()) || (x == r.second() && y == r.first()) ) {
                             cash = Math.abs (cash + exactaBoxWin);
@@ -122,7 +122,7 @@ public class midterm {
                     
                     case 3:
                     // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses 
-                    System.out.println("Trifecta Bet");
+                    System.out.print("For an Trifecta bet, pick the horses that will finish in 1st, 2nd & 3rd in correct order: ");
                         x = input.nextInt(); y = input.nextInt(); z = input.nextInt();
                         if (x == r.first() && y == r.second() && z == r.third()) {
                             cash = Math.abs (cash + trifectaWin);
@@ -138,8 +138,8 @@ public class midterm {
                     break;
                     
                     case 4:
-                    // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses in any order
-                    System.out.println("Trifecta Box Bet");
+                    // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses 
+                    System.out.println("For an Trifecta bet, pick the horses that will finish in 1st, 2nd & 3rd in any order: ");
                         x = input.nextInt(); y = input.nextInt(); z = input.nextInt();
                         if (x != r.fourth() && y != r.fourth() && z != r.fourth()) {
                             cash = Math.abs(cash + trifectaBoxWin);
@@ -158,11 +158,11 @@ public class midterm {
                     break;
                    
                     case 6:
-                    System.out.println("The winners will be " + r.first() + r.second() + r.third() + r.fourth() );
+                    System.out.println("The winners will be " + r.first() + " " + r.second() + " " + r.third() + " " + r.fourth() );
                     break;
                     
                     case 7:
-                    System.out.println("You have won " + youWon + " bets. You have lost" + youLost + " bets.");
+                    System.out.println("You have won " + youWon + " bets. You have lost " + youLost + " bets.");
                     break;
                     
                     case 8:
@@ -179,7 +179,7 @@ public class midterm {
                 
          // Display elements in array using a loop (you can ignore this)
                 for (int value : r.getarray()) {
-                    System.out.println(value);
+                
                 }
         // display the winners using the access methods
         // print out the first place
@@ -190,7 +190,7 @@ public class midterm {
                 System.out.println("Third place is " + r.third());
         // print out the fourth place
                 System.out.println("Fourth place is " + r.fourth());
-            // r.readysetgo();
+        
             }
         
 }
