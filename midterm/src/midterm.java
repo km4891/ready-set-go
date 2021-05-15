@@ -87,9 +87,9 @@ public class midterm {
                 selection = input.nextInt();
 
                 switch(selection){
+                    // checks to see if your x & y picks are the same as r.first & r.second horses
                     case 1:
-                   
-                    System.out.println("Exacta Bet");
+                        System.out.println("Exacta Bet");
                         x = input.nextInt(); y = input.nextInt();
                             if (x == r.first() && y == r.second()) {
                                 cash = Math.abs (cash + exactaWin);
@@ -105,6 +105,7 @@ public class midterm {
                     break;
                     
                     case 2:
+                    // checks to see if your x & y picks are the same as r.first & r.second horses in any order
                     System.out.println("Exacta Box Bet");
                         x = input.nextInt(); y = input.nextInt();
                         if ( (x == r.first() && y == r.second()) || (x == r.second() && y == r.first()) ) {
@@ -120,6 +121,7 @@ public class midterm {
                     break;
                     
                     case 3:
+                    // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses 
                     System.out.println("Trifecta Bet");
                         x = input.nextInt(); y = input.nextInt(); z = input.nextInt();
                         if (x == r.first() && y == r.second() && z == r.third()) {
@@ -136,6 +138,7 @@ public class midterm {
                     break;
                     
                     case 4:
+                    // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses in any order
                     System.out.println("Trifecta Box Bet");
                         x = input.nextInt(); y = input.nextInt(); z = input.nextInt();
                         if (x != r.fourth() && y != r.fourth() && z != r.fourth()) {
@@ -187,7 +190,7 @@ public class midterm {
                 System.out.println("Third place is " + r.third());
         // print out the fourth place
                 System.out.println("Fourth place is " + r.fourth());
-            r.readysetgo();
+            // r.readysetgo();
             }
         
 }
