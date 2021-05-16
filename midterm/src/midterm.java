@@ -67,12 +67,10 @@ public class midterm {
                int trifectaWin = 200;
                int trifectaLost = 25;
                int trifectaBoxWin = 150;
-               int trifectaBoxLost = 20;
-
-               
-              
+               int trifectaBoxLost = 20;    
 
                do {
+                // Menu options to select numerically
                 System.out.println("[1]Place an Exacta bet");
                 System.out.println("[2]Place an Exactabox bet");
                 System.out.println("[3]Place an Trifecta bet");
@@ -94,12 +92,12 @@ public class midterm {
                             if (x == r.first() && y == r.second()) {
                                 cash = Math.abs (cash + exactaWin);
                                 youWon++;
-                             System.out.println("winner");
+                             System.out.println("Winner! You picked the correct horses");
                              
                         } else {
                             cash = Math.abs (cash - exactaLost);
                             youLost++;
-                            System.out.println("lose");
+                            System.out.println("You lost. Better luck next time!");
                         }
                     r.readysetgo();  
                     break;
@@ -111,11 +109,11 @@ public class midterm {
                         if ( (x == r.first() && y == r.second()) || (x == r.second() && y == r.first()) ) {
                             cash = Math.abs (cash + exactaBoxWin);
                             youWon++;
-                            System.out.println("winner");
+                            System.out.println("Winner! You picked the correct horses");
                         } else {
                             cash = Math.abs (cash - exactaBoxLost);
                             youLost++;
-                            System.out.println("lose");
+                            System.out.println("You lost. Better luck next time!");
                         }
                     r.readysetgo();
                     break;
@@ -127,54 +125,55 @@ public class midterm {
                         if (x == r.first() && y == r.second() && z == r.third()) {
                             cash = Math.abs (cash + trifectaWin);
                             youWon++;
-                         System.out.println("winner");
+                         System.out.println("Winner! You picked the correct horses");
 
                         } else {
                             cash = Math.abs(cash - trifectaLost);
                             youLost++;
-                            System.out.println("lose");
+                            System.out.println("You lost. Better luck next time!");
                         }
                     r.readysetgo();
                     break;
                     
                     case 4:
                     // checks to see if your x, y & z picks are the same as r.first, r.second & r.third horses 
-                    System.out.println("For an Trifecta bet, pick the horses that will finish in 1st, 2nd & 3rd in any order: ");
+                    System.out.print("For an Trifecta bet, pick the horses that will finish in 1st, 2nd & 3rd in any order: ");
                         x = input.nextInt(); y = input.nextInt(); z = input.nextInt();
                         if (x != r.fourth() && y != r.fourth() && z != r.fourth()) {
                             cash = Math.abs(cash + trifectaBoxWin);
                             youWon++;
-                            System.out.println("win");
+                            System.out.println("Winner! You picked the correct horses");
                     } else  {
                         cash = Math.abs(cash - trifectaBoxLost);
                         youLost++;
-                        System.out.println("lose");
+                        System.out.println("You lost. Better luck next time!");
                     }
                     r.readysetgo();
                     break;
                     
                     case 5:
+                    // Shows you how much cash you have available
                     System.out.println("Your balance is " + cash);
                     break;
                    
                     case 6:
-                    System.out.println("The winners will be " + r.first() + " " + r.second() + " " + r.third() + " " + r.fourth() );
+                    // Lets you cheat and see which horses will win 
+                    System.out.println("The winning order of the horses will be " + r.first() + " " + r.second() + " " + r.third() + " " + r.fourth() );
                     break;
                     
                     case 7:
+                    // Shows you how many bets you have won and lost
                     System.out.println("You have won " + youWon + " bets. You have lost " + youLost + " bets.");
                     break;
                     
                     case 8:
-                    System.out.println("All done");
+                    // Exits the loop
+                    System.out.println("Thanks for playing and come back soon the Canyon Country Derby");
                     break;
                     default:
-                    System.out.println("please select a valid option");
+                    System.out.println("Please select a valid option");
                 }
             }while (selection != 8);
-               
-               
-               
                 
                 
          // Display elements in array using a loop (you can ignore this)
